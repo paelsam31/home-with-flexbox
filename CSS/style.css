@@ -47,7 +47,6 @@ body::-webkit-scrollbar-thumb {
 /*Header, logo and list*/
 .header {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 
@@ -152,4 +151,43 @@ main {
 }
 .footer div > h3 > a {
   text-decoration: none;
+}
+
+/*Responsive Desing Añadido*/
+@media only screen and (max-width: 790px) {
+  .header {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+  }
+  .logo {
+    display: inherit;
+    flex-direction: column;
+  }
+  .logo h1 {
+    display: none;
+  }
+  .logo img {
+    width: 90px;
+    margin: 0;
+  }
+  nav li > a {
+    font-size: 3.5vw;
+  }
+
+  .main__hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://placeimg.com/450/750/animals");
+  }
+
+  .flex-container {
+    padding: 20px 0 20px 0;
+  }
+  .flex-order-1 {
+    order: 0;
+  }
 }
